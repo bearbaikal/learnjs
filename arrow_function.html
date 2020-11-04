@@ -1,0 +1,30 @@
+<h1>Уроки по JS</h1>
+<h2>Стрелочные функции, деструктуризация, reducer</h2>
+<h3>Смотри код скрипта и вывод в консоли</h3>
+<script>
+	//
+	console.log("Простая стрелочная функция-выражение")
+	var f = (a, b) => a + b
+	console.log(f(1, 3))
+	//
+	console.log("С использованием деструктуризации")
+	var f = ([a, b], {x: c} = {x: a/b}) => a + b + c;
+	console.log(f([10, 4]))
+	//
+	console.log("Несколько высказываний")
+	var f = (a, b) => {console.log(a + b);console.log(a*b);}
+	f(5,2)
+	//
+	console.log("Возврат значения")
+	var f = (a) => {return a-2}
+	console.log(f(11))
+	//
+	console.log("Функция без параметров")
+	var f =() => {console.log(10)}
+	var f = (a=5) => a*2
+	console.log(f())
+	//
+	console.log("Использование метода reduce")
+	var sum = (...args) => args.reduce((m, n) => m + n, 10)
+	console.log(sum(1,2,3))
+</script>
